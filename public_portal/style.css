@@ -1,0 +1,182 @@
+/* ============ GLOBAL STYLE ============ */
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #1e40af;
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* ============ NAVBAR ============ */
+nav {
+  backdrop-filter: blur(8px);
+  background: rgba(37, 99, 235, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============ LOGIN PAGE ============ */
+#login {
+  background: linear-gradient(120deg, #2563eb, #38bdf8);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login div {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#login h2 {
+  margin-bottom: 20px;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+#login input {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#login input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+#login button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#login button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ============ HOME SECTION ============ */
+#home {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#home h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+#home p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+#home button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+#home button:hover {
+  background-color: #1e40af;
+}
+
+/* ============ LAYANAN SECTION ============ */
+#layanan {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#layanan h2 {
+  font-size: 1.8rem;
+  color: #1e40af;
+}
+
+#layanan select,
+#layanan input {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#layanan input:focus,
+#layanan select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+#layanan button {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+#layanan button:hover {
+  background-color: #1e3a8a;
+}
+
+/* ============ CARD DATA ============ */
+#result .bg-white {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#result .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

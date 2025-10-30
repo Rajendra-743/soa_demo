@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Layanan Publik Terpadu</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    nav {
+      backdrop-filter: blur(8px);
+      background: linear-gradient(to right, #2563eb, #1e3a8a);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav button {
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+    }
+
+    .card h2 {
+      font-weight: 600;
+      color: #1e40af;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      padding: 0.6rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e3a8a;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="font-poppins bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <h1 class="text-2xl font-semibold tracking-wide">Portal Layanan Publik</h1>
+      <div class="space-x-4 flex items-center">
+        <button onclick="showSection('home')" class="px-3 py-2 rounded">Beranda</button>
+        <button onclick="showSection('layanan')" class="px-3 py-2 rounded">Layanan</button>
+        <button id="logoutBtn" class="px-3 py-2 rounded">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Beranda -->
+  <section id="home" class="max-w-5xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-4xl font-bold mb-5 text-blue-700">Selamat Datang di Portal Layanan Terpadu</h2>
+    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+      Akses berbagai layanan publik dari Dinas Kependudukan, Pendapatan, Kesehatan, dan Pekerjaan Umum dalam satu portal terpadu.
+    </p>
+    <button onclick="showSection('layanan')" class="btn-primary mb-12">
+      Mulai Akses Layanan
+    </button>
+
+    <!-- Team Slider -->
+    <div class="max-w-5xl mx-auto px-4 py-10">
+  <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Team Saya</h3>
+  <div class="flex justify-center">
+    <div class="text-center">
+      <img class="bg-white rounded-xl shadow-2xl max-w-sm w-full text-center hover:shadow-2xl hover:-translate-y-1" 
+      src="images/p.jpeg" 
+      alt="Foto Rajendra Aulya Marsa Ilham">
+      <div class="mt-4">
+      <h4 class="text-lg font-semibold">Rajendra Aulya Marsa Ilham</h4>
+      <p class="text-gray-600">NIM 6701220137</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Article -->
+<div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+  <div class="max-w-2xl">
+    <!-- Content -->
+    <div class="space-y-5 md:space-y-8">
+      <!-- 1. Pengertian Website -->
+      <div class="space-y-3">
+        <h2 class="text-2xl font-bold md:text-3xl text-blue-700">Pengertian Website</h2>
+        <p class="text-lg text-gray-800">
+          Website ini merupakan portal yang menggabungkan 4 database berbeda untuk implementasi tugas integrasi sistem enterprise. Tujuannya adalah untuk mempermudah akses layanan publik dari Dinas Kependudukan, Pendapatan, Kesehatan, dan Pekerjaan Umum melalui satu antarmuka terpadu.
+        </p>
+      </div>
+
+      <!-- 2. Pengertian Microservice dan Arsitektur -->
+      <div class="space-y-3">
+        <h2 class="text-2xl font-bold md:text-3xl text-blue-700">Microservice dan Arsitektur</h2>
+        <p class="text-lg text-gray-800">
+          Microservice adalah pendekatan arsitektur perangkat lunak di mana aplikasi dibangun sebagai kumpulan layanan kecil yang dapat berjalan secara independen. Setiap layanan menangani fungsi spesifik, memudahkan pengembangan, pemeliharaan, dan skalabilitas sistem.
+        </p>
+        <figure>
+          <img class="w-full object-cover rounded-xl" src="images/Q.jpeg" alt="Diagram Arsitektur Microservice">
+          <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Diagram Arsitektur Microservice pada Website
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- 3. Empat Service yang Digunakan -->
+      <div class="space-y-3">
+        <h2 class="text-2xl font-bold md:text-3xl text-blue-700">Empat Service</h2>
+        <p class="text-lg text-gray-800">Website ini menggunakan 4 service utama untuk tugas integrasi:</p>
+        <table class="w-full border border-gray-300 rounded-lg text-left text-gray-800">
+          <thead class="bg-blue-100">
+            <tr>
+              <th class="px-4 py-2 border">Service</th>
+              <th class="px-4 py-2 border">Fungsi</th>
+              <th class="px-4 py-2 border">Database</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border">Dinas Kependudukan</td>
+              <td class="px-4 py-2 border">Mengelola data NIK dan kependudukan</td>
+              <td class="px-4 py-2 border">db_kependudukan</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border">Dinas Pendapatan</td>
+              <td class="px-4 py-2 border">Mengelola data pajak dan pendapatan</td>
+              <td class="px-4 py-2 border">db_pendapatan</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border">Dinas Kesehatan</td>
+              <td class="px-4 py-2 border">Mengelola data kesehatan masyarakat</td>
+              <td class="px-4 py-2 border">db_kesehatan</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border">Dinas Pekerjaan Umum</td>
+              <td class="px-4 py-2 border">Mengelola data proyek infrastruktur</td>
+              <td class="px-4 py-2 border">db_pekerjaan_umum</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4. Kesimpulan -->
+      <div class="space-y-3">
+        <h2 class="text-2xl font-bold md:text-3xl text-blue-700">Kesimpulan</h2>
+        <p class="text-lg text-gray-800">
+          Dengan menggunakan arsitektur microservice, website dapat mengintegrasikan empat layanan berbeda menjadi satu portal yang mudah digunakan. Setiap service berjalan independen, sehingga sistem lebih scalable, mudah diperbarui, dan siap digunakan sebagai solusi integrasi sistem enterprise.
+        </p>
+      </div>
+    </div>
+    <!-- End Content -->
+  </div>
+</div>
+<!-- End Blog Article -->
+
+
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="hidden max-w-6xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10 text-blue-700">Pilih dan Cari Layanan Publik</h2>
+
+    <div class="flex justify-center mb-8">
+      <select id="layananSelect" class="border px-4 py-2 rounded-lg w-64 focus:ring-2 focus:ring-blue-400" onchange="updatePlaceholder()">
+        <option value="citizen">Dinas Kependudukan</option>
+        <option value="tax">Dinas Pendapatan</option>
+        <option value="health">Dinas Kesehatan</option>
+        <option value="project">Dinas Pekerjaan Umum</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-center mb-8 space-y-3 md:space-y-0 md:space-x-3">
+      <input id="id" placeholder="Masukkan NIK" class="border px-4 py-2 rounded-lg w-full md:w-64 focus:ring-2 focus:ring-blue-400">
+      <input id="region" placeholder="Masukkan Wilayah atau Nama Proyek" class="border px-4 py-2 rounded-lg w-full md:w-64 focus:ring-2 focus:ring-blue-400 hidden">
+      <button id="searchBtn" class="btn-primary">Cari Data</button>
+    </div>
+
+    <div id="result" class="grid grid-cols-2   md:grid-cols-1 lg:grid-cols-1 gap-8"></div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
